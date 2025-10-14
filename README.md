@@ -1,1 +1,52 @@
 # bigbee-orders
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Bee Convenience Order Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("mdTpj0euKQmKo5NWt"); // Your EmailJS Public Key
+    })();
+  </script>
+</head>
+<body>
+  <h1>ᴡʜᴀᴛ ᴡᴏᴜʟᴅ ʏᴏᴜ ʟɪᴋᴇ ᴛᴏ ɢᴇᴛ?</h1>
+  <form id="orderForm">
+    <fieldset>
+      <legend><h2>Customer's Order</h2></legend>
+
+      <label for="name">Enter your full Name</label>
+      <input type="text" id="name" name="customer_name" required />
+
+      <label for="order">What would you like to order?</label>
+      <input type="text" id="order" name="order_item" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="customer_phone" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="customer_email" required />
+
+      <button type="submit">Place your order</button>
+    </fieldset>
+  </form>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_168okth", "template_olvyup5", this)
+        .then(() => {
+          alert("Order sent successfully!");
+          this.reset();
+        }, (error) => {
+          alert("Failed to send order: " + error);
+        });
+    });
+  </script>
+</body>
+</html>
