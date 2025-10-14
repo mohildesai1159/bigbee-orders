@@ -1,19 +1,23 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background-color: #fff8dc; /* light honey yellow */
   padding: 20px;
   color: #333;
+  background-image: url('https://pngtree.com/free-backgrounds-photos/bee-themed'); /* optional bee background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1 {
   text-align: center;
-  color: #2c3e50;
+  color: #f1c40f; /* bright yellow */
 }
 
 form {
   max-width: 500px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #fffbe6; /* soft yellow */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -26,6 +30,7 @@ fieldset {
 label {
   display: block;
   margin-top: 10px;
+  color: #555;
 }
 
 input {
@@ -33,18 +38,21 @@ input {
   padding: 8px;
   margin-top: 5px;
   box-sizing: border-box;
+  border: 1px solid #f1c40f;
+  border-radius: 4px;
 }
 
 button {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #2c3e50;
-  color: white;
+  background-color: #f1c40f;
+  color: black;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #34495e;
+  background-color: #f39c12;
 }
