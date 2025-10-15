@@ -7,51 +7,31 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Banner Image -->
-  <img src="https://img1.wsimg.com/isteam/ip/b76e8cf4-308e-41b2-bcea-db823d366e85/Big%20Bee%20Header.png" alt="Big Bee Header" style="width:100%; max-width:600px; display:block; margin:0 auto 20px;" />
 
-  <!-- Welcome Message -->
-  <p style="text-align:center; font-size:18px; font-weight:bold; margin-bottom:20px;">
-    Welcome to Big Bee Convenience! Fast, friendly, and buzzing with good deals.
-  </p>
+  <header>
+    <img src="https://raw.githubusercontent.com/mohildesai1159/bigbee-orders/main/959dd2cd-3df7-4cdc-879f-e474a613429f.jpg" alt="Big Bee Convenience Banner" />
+    <h1>🐝 Big Bee Convenience Order Form</h1>
+  </header>
 
-  <!-- Storefront Image -->
-  <img src="https://raw.githubusercontent.com/mohildesai1159/bigbee-orders/main/959dd2cd-3df7-4cdc-879f-e474a613429f.jpg" alt="Big Bee Storefront" style="width:100%; max-width:600px; display:block; margin:20px auto;" />
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
 
-  <!-- Pickup Location -->
-  <p style="text-align:center; font-weight:bold; font-size:16px; margin-bottom:30px;">
-    📍 Pickup Location: 856 Lawrence Rd, Hamilton
-  </p>
+    <label for="order">Order Details</label>
+    <textarea id="order" name="order" rows="4" required></textarea>
 
-  <h1>ᴡʜᴀᴛ ᴡᴏᴜʟᴅ ʏᴏᴜ ʟɪᴋᴇ ᴛᴏ ɢᴇᴛ?</h1>
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required />
 
-  <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-    <fieldset>
-      <legend><h2>Customer's Order</h2></legend>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
 
-      <label for="name">Enter your full Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="order">What would you like to order?</label>
-      <input type="text" id="order" name="order" required />
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required />
-
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required />
-
-      <!-- Hidden FormSubmit Settings -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://mohildesai1159.github.io/bigbee-orders/thankyou.html">
-
-      <button type="submit">🐝 Place your order</button>
-    </fieldset>
+    <button type="submit">Place Your Order 🐝</button>
   </form>
 
-  <!-- Footer -->
-  <footer style="text-align:center; margin-top:40px; font-size:14px; color:#555;">
-    🕒 Open daily: 9am – 9pm | 📍 856 Lawrence Rd, Hamilton
+  <footer>
+    Pickup Location: 856 Lawrence Rd, Hamilton | ATM & Ice Available
   </footer>
+
 </body>
 </html>
