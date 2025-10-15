@@ -1,207 +1,71 @@
-/* General Styling & Reset */
 body {
-    font-family: 'Poppins', sans-serif; /* Professional font */
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Light background for contrast */
-    color: #333;
-    line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffde7;
+  margin: 0;
+  padding: 20px;
+  color: #333;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Header and Banner - REMOVED */
-/* .header {
-    background-color: #2c3e50;
-    padding: 10px 0;
-}
-.header-banner {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-*/
-
-/* Welcome Section */
-.welcome-section {
-    text-align: center;
-    padding: 20px 0;
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.welcome-title {
-    color: #f39c12; /* A more professional, slightly deeper yellow/gold */
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 10px;
-    margin-top: 30px; /* Added some top margin since the header is gone */
+h1 {
+  color: #fbc02d;
+  font-size: 2rem;
+  margin-top: 0.5rem;
 }
 
-.welcome-text {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-    color: #555;
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.storefront-image-wrapper {
-    overflow: hidden; /* Ensures image does not bleed out */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
-    margin: 30px auto;
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 
-.storefront-image {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Storefront Animation - Subtle zoom on hover */
-.storefront-image:hover {
-    transform: scale(1.03);
+button {
+  background-color: #fdd835;
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Services Section */
-.services-section {
-    padding: 20px;
-    background-color: #fff; /* White card background */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    text-align: center;
+button:hover {
+  background-color: #ffeb3b;
 }
 
-.section-title {
-    color: #c0392b; /* A contrasting accent color */
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-weight: 600;
-}
-
-.services-grid span {
-    background-color: #ecf0f1;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    border: 1px solid #bdc3c7;
-    transition: background-color 0.3s;
-}
-
-/* Service item animation on hover */
-.services-grid span:hover {
-    background-color: #f39c12;
-    color: white;
-    cursor: default;
-}
-
-/* Divider */
-.divider {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
-    margin: 30px 0;
-}
-
-/* Location and Hours */
-.info-section {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.info-card {
-    background-color: #e8f4f8;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 5px solid #3498db;
-    display: inline-block;
-}
-
-.info-item {
-    margin: 5px 0;
-    font-size: 1em;
-}
-
-/* Order Button */
-.order-button-container {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.order-button {
-    background-color: #f39c12;
-    color: white; /* Changed text color to white for better contrast */
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-    box-shadow: 0 4px #e67e22; /* 3D press effect */
-}
-
-/* Button animation on hover/active */
-.order-button:hover {
-    background-color: #e67e22;
-    transform: translateY(-2px); /* Lift button on hover */
-    box-shadow: 0 6px #d35400;
-}
-
-.order-button:active {
-    transform: translateY(2px); /* Press button down on click */
-    box-shadow: 0 2px #d35400;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #777;
-    border-top: 1px solid #ddd;
-}
-
-/* **Animation** - Buzzing Bee Effect */
-@keyframes buzz {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-}
-
-.bee-emoji {
-    display: inline-block;
-    animation: buzz 0.3s infinite alternate; /* Apply the buzz animation */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 600px) {
-    .welcome-title {
-        font-size: 2em;
-    }
-    .order-button {
-        width: 90%;
-        padding: 12px 0;
-    }
-    .services-grid {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .services-grid span {
-        width: 100%;
-        padding: 10px 0;
-    }
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
 }
