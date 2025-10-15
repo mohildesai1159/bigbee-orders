@@ -1,56 +1,116 @@
+/* GLOBAL STYLES */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #fff8dc, #f1c40f);
-  padding: 20px;
-  color: #333;
+    /* Changed font to a more modern, readable one */
+    font-family: 'Poppins', Arial, sans-serif;
+    /* Adjusted gradient for a smoother, more vibrant feel */
+    background: linear-gradient(to bottom right, #f8f9fa, #fff0c7); 
+    padding: 20px;
+    color: #333;
+    min-height: 100vh; /* Ensure background covers full viewport */
+    display: flex; /* Helps center content vertically if needed */
+    justify-content: center;
+    align-items: center;
 }
 
+/* HEADLINE */
 h1 {
-  text-align: center;
-  color: #f1c40f;
+    text-align: center;
+    color: #f39c12; /* Slightly deeper, more professional yellow/gold */
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    /* Subtle animation on load */
+    animation: fadeInDown 0.8s ease-out;
 }
 
+/* FORM CONTAINER */
 form {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: #fffbe6;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%; /* Ensures it scales well on smaller screens */
+    margin: 0 auto;
+    background-color: #ffffff; /* Cleaner white background */
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* Softer rounded corners */
+    /* Enhanced, more professional shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 3px #f1c40f; 
+    transition: transform 0.3s ease;
+}
+
+/* Small, subtle hover animation on the form itself */
+form:hover {
+    transform: translateY(-2px);
 }
 
 fieldset {
-  border: none;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
+/* LABELS */
 label {
-  display: block;
-  margin-top: 10px;
-  color: #555;
+    display: block;
+    margin-top: 15px; /* Increased top margin */
+    color: #333; /* Darker color for better readability/accessibility */
+    font-weight: 600; /* Bolder for emphasis */
+    font-size: 0.95em;
+    transition: color 0.3s;
 }
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-  border: 1px solid #f1c40f;
-  border-radius: 4px;
+/* INPUT FIELDS */
+input, select, textarea {
+    width: 100%;
+    padding: 10px; /* Increased padding for easier clicking/tapping */
+    margin-top: 8px; /* Increased margin */
+    box-sizing: border-box;
+    border: 2px solid #ddd; /* Lighter default border */
+    border-radius: 8px; /* Softer rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
 }
 
+/* Professional Focus/Active State for inputs */
+input:focus, select:focus, textarea:focus {
+    border-color: #f39c12; /* Accent color border on focus */
+    outline: none; /* Remove default blue outline */
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3); /* Subtle glow effect */
+}
+
+/* BUTTON */
 button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #f1c40f;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 16px;
+    margin-top: 30px; /* More space above the button */
+    padding: 12px 25px;
+    background-color: #f39c12;
+    color: #2c3e50; /* Dark blue/grey text for high contrast */
+    border: none;
+    border-radius: 8px; /* Softer rounding */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%; /* Make button full width */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px #e67e22; /* 3D effect */
 }
 
+/* Button Hover and Active State Animation */
 button:hover {
-  background-color: #f39c12;
+    background-color: #e67e22; /* Darker yellow on hover */
+    transform: translateY(-2px); /* Lifts button */
+    box-shadow: 0 6px #d35400;
 }
+
+button:active {
+    transform: translateY(2px); /* Presses button down */
+    box-shadow: 0 2px #d35400;
+}
+
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
