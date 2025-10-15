@@ -5,52 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Big Bee Convenience Order Form</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function () {
-      emailjs.init("mdTpj0euKQmKo5NWt"); // Your EmailJS Public Key
-    })();
-  </script>
 </head>
 <body>
+  <!-- Banner Image -->
   <img src="https://img1.wsimg.com/isteam/ip/b76e8cf4-308e-41b2-bcea-db823d366e85/Big%20Bee%20Header.png" alt="Big Bee Header" style="width:100%; max-width:600px; display:block; margin:0 auto 20px;" />
-   <img src="https://github.com/mohildesai1159/bigbee-orders/blob/main/959dd2cd-3df7-4cdc-879f-e474a613429f.jpg" alt="Big Bee Storefront" style="width:100%; max-width:600px; display:block; margin:20px auto;" />
+
+  <!-- Storefront Image -->
+  <img src="https://raw.githubusercontent.com/mohildesai1159/bigbee-orders/main/959dd2cd-3df7-4cdc-879f-e474a613429f.jpg" alt="Big Bee Storefront" style="width:100%; max-width:600px; display:block; margin:20px auto;" />
+
+  <!-- Pickup Location -->
   <p style="text-align:center; font-weight:bold; font-size:16px; margin-bottom:30px;">
     📍 Pickup Location: 856 Lawrence Rd, Hamilton
   </p>
+
   <h1>ᴡʜᴀᴛ ᴡᴏᴜʟᴅ ʏᴏᴜ ʟɪᴋᴇ ᴛᴏ ɢᴇᴛ?</h1>
-  <form id="orderForm">
+
+  <form action="https://formsubmit.co/mohildesai1159@gmail.com" method="POST">
     <fieldset>
       <legend><h2>Customer's Order</h2></legend>
 
       <label for="name">Enter your full Name</label>
-      <input type="text" id="name" name="customer_name" required />
+      <input type="text" id="name" name="name" required />
 
       <label for="order">What would you like to order?</label>
-      <input type="text" id="order" name="order_item" required />
+      <input type="text" id="order" name="order" required />
 
       <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="customer_phone" required />
+      <input type="tel" id="phone" name="phone" required />
 
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="customer_email" required />
+      <input type="email" id="email" name="email" required />
+
+      <!-- Hidden FormSubmit Settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://mohildesai1159.github.io/bigbee-orders/thankyou.html">
 
       <button type="submit">Place your order</button>
     </fieldset>
   </form>
-
-  <script>
-    document.getElementById("orderForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      emailjs.sendForm("service_168okth", "template_olvyup5", this)
-        .then(() => {
-          alert("Order sent successfully!");
-          this.reset();
-        }, (error) => {
-          alert("Failed to send order: " + error);
-        });
-    });
-  </script>
 </body>
 </html>
